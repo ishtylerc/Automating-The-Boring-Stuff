@@ -11,7 +11,7 @@ print('The length of your name is:')
 #prints number of characters in the input text
 print(len(myName))
 
-#takes input and turns it to a number in order to incement by 1. Then take updated int and turns it to a str to be concatonated with the other text
+#takes input and turns it to a number in order to incement by 1. Then take updated int. and turns it to a str to be concatonated with the other text
 print('What is your age?')
 myAge = input()
 print('You will be ' + str(int(myAge) + 1) + ' in a year.')
