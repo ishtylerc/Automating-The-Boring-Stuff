@@ -1,4 +1,4 @@
-
+# Example of an if else statement
 # name = 'Marry'
 # password = 'swordfish'
 # if name == 'Mary':
@@ -9,6 +9,7 @@
 #                 print('Wrong password')
 
 
+# Example of an elif statement
 # age = 10
 # if name == 'Alice':
 #         print('Hi, Alice')
@@ -16,6 +17,7 @@
 #         print('Aloha, stranger')
 
 
+# Example of combination of all there flow control statements
 # name = 'Carol'
 # age = 3000
 # if name == 'Alice':
@@ -26,8 +28,25 @@
 #         print('You are neither Alice nor a little kid.')
 
 
-spam = 0
-if spam < 5:
-        print('Hello, world')
-        spam = spam + 1
-       
+# Example of a while loop
+# spam = 0
+# while spam < 5:
+#         print('Hello, world')
+#         spam = spam + 1
+
+
+# Example of a while loop + input       
+# name = ''
+# while name != 'your name':
+#     print('Please type your name.')
+#     name = input()
+# print('Thank you')
+
+
+# Example of a while loop plus a break statement
+# while True:
+#     print('What is your name?')
+#     name = input()
+#     if name == 'your name':
+#         break
+# print('Thank you "your name"')
