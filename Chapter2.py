@@ -52,7 +52,7 @@
 # print('Thank you "your name"')
 
 
-#Example of while loop with continue/break statement
+## Example of while loop with continue/break statement
 # while True: 
 #         print('Who are you?')
 #         name = input()
@@ -64,4 +64,31 @@
 #                 break
 # print('Access granted.')
 
-name = ''
+
+## Example of truthy and falsy + while loop 
+# name = ''
+# while not name:
+#     print('Enter your name:')
+#     name = input()
+# print('How many guests will you have')
+# numOfGuests = int(input())
+# if numOfGuests:
+#     print('Be sure to have enough room for all your guests.')
+#     print('Done')
+
+# #Example of basic for loop
+# print('My name is')
+# for i in range(5):
+#     print('Jimmy Five Times (' + str(i) + ')')
+
+
+#Another example of a for loop
+# total = 0 
+# for num in range(10):
+#     total = total + num
+# print(total)
+
+
+# Example of for loop with step fuction
+# for i in range(0, 11, 2):
+#     print(i)
