@@ -113,22 +113,88 @@
 
 
 # Example of a number guessing game with numbers 1 through 
-import random
-secretNumber = random.randint(1, 20)
-print('I am thinking of a number between 1 and 20.')
+# import random
+# secretNumber = random.randint(1, 20)
+# print('I am thinking of a number between 1 and 20.')
 
-#Ask the player to guess 6 times.
-for guessesTaken in range(1, 7):
-        print('Take a guess.')
-        guess = int(input())
+#Guessing number game
+# for guessesTaken in range(1, 7):
+#         print('Take a guess.')
+#         guess = int(input())
 
-        if guess < secretNumber:
-                print('Your guess is too low.')
-        elif guess > secretNumber:
-                print('Your guess is too high.')
-        else:
-                break #This condition is the correct guess
-if guess == secretNumber:
-        print(('Good job! You guessed my number in ' + str(guessesTaken) + 'guesses!'))
-else: 
-        print('Nope. The number I was thinking of was ' + str(secretNumber))
+#         if guess < secretNumber:
+#                 print('Your guess is too low.')
+#         elif guess > secretNumber:
+#                 print('Your guess is too high.')
+#         else:
+#                 break #This condition is the correct guess
+# if guess == secretNumber:
+#         print(('Good job! You guessed my number in ' + str(guessesTaken) + 'guesses!'))
+# else: 
+#         print('Nope. The number I was thinking of was ' + str(secretNumber))
+
+
+
+#Rock, Paper, Scissors game
+import random, sys
+
+print('Lets play, "Rock, Paper, Scissors"')
+
+#Vars to keep score of wins, losses and ties
+wins = 0
+losses = 0 
+ties = 0
+
+while True: #Main game loop
+    print('%s Wins, %s Losses, %s Ties' % (wins, losses, ties))
+    while True:
+        print('Enter you move: (r)ock (p)aper (s)cissors or (q)uit')
+        playerMove = input()
+        if playerMove == 'q':
+            sys.exit() #quit the program
+        if playerMove == 'r' or playerMove == 'p' or playerMove == 's':
+            break #Used to break out of the player loop
+        print('Type one of "r", "p", "s", or "q".')
+    
+    #Display what the player will be playing as
+    if playerMove == 'r':
+        print('Rock vs...')
+    elif playerMove == 'p':
+        print('Paper vs...')
+    elif playerMove == 's':
+        print('Scissors vs...')
+    
+    #Display what the computer chooses
+    randomNumber = random.randint(1, 3)
+    if randomNumber == 1:
+        computerMove = 'r'
+        print('Rock')
+    if randomNumber == 2:
+        computerMove = 'p'
+        print('Paper')
+    if randomNumber == 3:
+        computerMove = 's'
+        print('Scissors')
+    
+    #Displays and record the scores overall
+    if playerMove == computerMove:
+        print('It is a tie!')
+        ties = ties + 1
+    elif playerMove == 's' and computerMove == 'p':
+        print('You win!')
+        wins = wins + 1
+    elif playerMove == 'r'and computerMove == 's':
+        print('You win!')
+        wins = wins + 1
+    elif playerMove == 'p'and computerMove == 'r':
+        print('You win!')
+        wins = wins + 1
+    elif playerMove == 'r'and computerMove == 'p':
+        print('You lose!')
+        losses = losses + 1
+    elif playerMove == 'p'and computerMove == 's':
+        print('You lose!')
+        losses = losses + 1
+    elif playerMove == 's'and computerMove == 'r':
+        print('You lose!')
+        losses = losses + 1
