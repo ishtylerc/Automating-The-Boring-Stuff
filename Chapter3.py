@@ -6,7 +6,8 @@
 # hello()    
 
 
-def hello(name):
-    print('Hello,' + name)
+def intro_message(name, age, gender):
+    print('Hello, ' + name + 'you are ' + age + 'and you are a ' + gender + '.')
 
-hello()   
+intro_message('Alice ', '31 ', 'Female')
+intro_message('John ', '25 ', 'Male')   
